@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+.section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.container {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.row,
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-element {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.width-100 {
+  width: 100% !important;
+}
+
+.ai-end {
+  align-items: flex-end !important;
+}
+.jc-between {
+  justify-content: space-between !important;
+}
+.jc-end {
+  justify-content: flex-end !important;
+}
+.text-center {
+  text-align: center !important;
+}
+
+.loginform,
+.regform {
+  padding: 25px;
+  max-width: 500px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px dashed;
+}
+.form-element {
+  width: 100%;
+  position: relative;
+}
+input[type="email"],
+input[type="password"],
+input[type="text"],
+.select {
+  width: 100%;
+  padding: 20px 15px;
+  outline: none;
+  border: 1px solid rgb(37, 74, 158);
+  border-radius: 5px;
+}
+.form-element label {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translateY(-50%);
+  font-size: 17px;
+  pointer-events: none;
+  color: rgb(47, 45, 45);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: top 300ms ease-in, left 300ms ease-in, padding-right 300ms ease-in,
+    font-size 300ms ease-in;
+}
+input[type="email"]:focus + label,
+input[type="password"]:focus + label,
+input[type="text"]:focus + label,
+input[type="email"]:not(:placeholder-shown) + label,
+input[type="password"]:not(:placeholder-shown) + label,
+input[type="text"]:not(:placeholder-shown) + label {
+  background: white;
+  padding-right: 3px;
+  padding-left: 3px;
+  top: 0;
+  left: 1.5%;
+  font-size: 13px;
+}
+
+input[type="email"]:invalid {
+  color: red;
+}
+
+.form-btn {
+  padding: 9px 25px;
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  color: green;
+  border: 1px solid green;
+  border-radius: 4px;
+  transition: color 250ms ease-in, background-color 350ms ease-in;
+
+  z-index: 1;
+}
+.form-btn:hover {
+  color: white;
+  background-color: green;
+}
+.reg-btn {
+  color: coral;
+  border-color: coral;
+}
+.reg-btn:hover {
+  color: white;
+  background-color: coral;
+}
+.sidebar {
+  min-width: 16%;
+
+  min-height: 100vh;
+  background-color: rgb(165, 115, 50);
+}
+.sidebar-container {
+  padding: 1rem;
+}
+.sidebar-container ul {
+  list-style: none;
+}
+.sidebar-container ul li {
+  margin-bottom: 1rem;
+}
+.sidebar-container h1 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: white;
+}
+.sidebar-container a {
+  position: relative;
+
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: black;
+  transition: color 350ms ease-in;
+}
+.sidebar-container a::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  border-bottom: 1px solid black;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in;
+}
+.sidebar-container a:hover {
+  color: black;
+}
+.sidebar-container a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.logout {
+  padding: 9px 25px;
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  color: crimson;
+  border: 1px solid crimson;
+  border-radius: 4px;
+  transition: color 300ms ease-in;
+
+  z-index: 1;
+}
+.logout::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: crimson;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 300ms ease-in;
+}
+.logout:hover {
+  color: white;
+}
+.logout:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.welcome-text {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: #9e9e9e;
+  border-radius: 10px;
+}
+.font-big {
+  font-size: 3rem;
+}
+.font-medium {
+  font-size: 1.8rem;
+}
+
+.dashboard,
+.users-table {
+  width: 80%;
+}
+.users-table h1 {
+  margin-bottom: 1rem;
+}
+.users-table table {
+  width: 80%;
+  border-collapse: collapse;
+}
+.users-table tr,
+.users-table th,
+.users-table td {
+  border: 1px solid black;
+}
+.users-table th {
+  padding: 10px;
+  font-size: 1.1rem;
+  background-color: indianred;
+}
+.users-table td {
+  padding: 10px;
+}
+.btn {
+  padding: 5px 9px;
+
+  border-radius: 5px;
+}
+.edit-btn {
+  color: white;
+  background: rgb(37, 74, 158);
+}
+.delete-btn {
+  margin-left: 10px;
+  color: white;
+  background-color: rgb(192, 19, 19);
+}
+
+select {
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+.sort-category {
+  position: relative;
+  display: inline-block;
+  margin-right: 1rem;
+}
+.sort-category p {
+  display: inline-block;
+  padding: 4px 10px;
+  cursor: pointer;
+  color: white;
+  font-size: 17px;
+  background-color: #565555;
+  position: relative;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 130px;
+  height: 100px;
+}
+.dropdown a {
+  display: block;
+  width: 100%;
+  padding: 4px 10px;
+
+  color: white;
+  background-color: rgb(47, 45, 45);
+}
+.dropdown a:hover {
+  filter: brightness(0.7);
+}
+.sort-category:hover .dropdown {
+  display: inline-block;
+}
