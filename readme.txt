@@ -2,6 +2,8 @@ PROJECT_NAME: ADMIN-PANEL WITH CRUD..
 
 NOTE: All database, table and columns names should be same as mention below..
 
+NOTE: firstname of admin should be admin..
+
 database = "student_portal";
 table = "information";
 
